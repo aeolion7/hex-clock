@@ -10,5 +10,6 @@ body {
 }
 
 #clock {
+  color: #eee;
   font-size: 10em;
 }
