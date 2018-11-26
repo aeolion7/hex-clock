@@ -4,9 +4,15 @@ function tick() {
   const minute = document.getElementById('minute');
   const second = document.getElementById('second');
 
-  hour.textContent = validateLength(date.getHours());
-  minute.textContent = validateLength(date.getMinutes());
-  second.textContent = validateLength(date.getSeconds());
+  const firstTwo = validateLength(date.getHours());
+  const midTwo = validateLength(date.getMinutes());
+  const lastTwo = validateLength(date.getSeconds());
+
+  hour.textContent = firstTwo;
+  minute.textContent = midTwo;
+  second.textContent = lastTwo;
+
+  document.getElementById('center').style.backgroundColor = `#${firstTwo}${midTwo}${lastTwo}`;
 }
 
 function validateLength(numStr) {
