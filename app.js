@@ -1,6 +1,15 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const { EventEmitter } = require('events');
+
+const clock = new EventEmitter();
+setInterval(() => {
+  const time = new Date().toLocaleString();
+  clock.emit('tick', time);
+}, 1000);
+
+clock.on('tick', time => console.log('The time is now', time));
 
 app.use(express.static(__dirname));
 
