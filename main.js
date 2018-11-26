@@ -1,18 +1,18 @@
 function tick() {
   const date = new Date(Date.now());
-  const hour = document.getElementById('hour');
-  const minute = document.getElementById('minute');
-  const second = document.getElementById('second');
+  const hourElement = document.getElementById('hour');
+  const minuteElement = document.getElementById('minute');
+  const secondElement = document.getElementById('second');
 
-  const firstTwo = validateLength(date.getHours());
-  const midTwo = validateLength(date.getMinutes());
-  const lastTwo = validateLength(date.getSeconds());
+  const hours = validateLength(date.getHours());
+  const minutes = validateLength(date.getMinutes());
+  const seconds = validateLength(date.getSeconds());
 
-  hour.textContent = firstTwo;
-  minute.textContent = midTwo;
-  second.textContent = lastTwo;
+  hourElement.textContent = hours;
+  minuteElement.textContent = minutes;
+  secondElement.textContent = seconds;
 
-  document.getElementById('center').style.backgroundColor = `#${firstTwo}${midTwo}${lastTwo}`;
+  document.getElementById('center').style.backgroundColor = `#${hours}${minutes}${seconds}`;
 }
 
 function validateLength(numStr) {
