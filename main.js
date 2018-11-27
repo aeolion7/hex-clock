@@ -12,6 +12,8 @@ function tick() {
   minuteElement.textContent = minutes;
   secondElement.textContent = seconds;
 
+  document.querySelector('body').style.backgroundColor = `#${seconds}${minutes}${hours}`;
+
   document.getElementById('center').style.backgroundColor = `#${hours}${minutes}${seconds}`;
 }
 
