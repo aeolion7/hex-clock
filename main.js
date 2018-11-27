@@ -18,5 +18,6 @@ function tick() {
 function validateLength(numStr) {
   return Number(numStr) < 10 ? '0' + numStr : numStr;
 }
-
+const firstTick = setInterval(tick, 100);
+clearInterval(firstTick);
 setInterval(tick, 1000);

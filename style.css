@@ -1,13 +1,18 @@
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
   margin: 0;
 }
 
 #center {
   align-items: center;
+  border-radius:30px;
   display: flex;
+  height: 96vh;
   justify-content: center;
-  height: 100vh;
+  margin-top: 1%;
+  width: 96vw;
 }
 
 #clock {
