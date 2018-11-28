@@ -14,7 +14,7 @@ function tick() {
 
   document.querySelector(
     'body'
-  ).style.backgroundColor = `#${seconds}${minutes}${hours}`;
+  ).style.backgroundColor = `#${seconds}${seconds}${seconds}`;
 
   document.getElementById(
     'center'
