@@ -12,14 +12,22 @@ function tick() {
   minuteElement.textContent = minutes;
   secondElement.textContent = seconds;
 
-  document.querySelector('body').style.backgroundColor = `#${seconds}${minutes}${hours}`;
+  document.querySelector(
+    'body'
+  ).style.backgroundColor = `#${seconds}${minutes}${hours}`;
 
-  document.getElementById('center').style.backgroundColor = `#${hours}${minutes}${seconds}`;
+  document.getElementById(
+    'center'
+  ).style.backgroundColor = `#${hours}${minutes}${seconds}`;
 }
 
 function validateLength(numStr) {
   return Number(numStr) < 10 ? '0' + numStr : numStr;
 }
-const firstTick = setInterval(tick, 100);
-clearInterval(firstTick);
+
+function init() {
+  tick();
+}
+
+init();
 setInterval(tick, 1000);
