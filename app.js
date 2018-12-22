@@ -9,8 +9,6 @@ setInterval(() => {
   clock.emit('tick', time);
 }, 1000);
 
-clock.on('tick', time => console.log('The time is now', time));
-
 app.use(express.static(__dirname));
 
 app.get('/', (req, res) => {
